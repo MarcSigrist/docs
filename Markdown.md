@@ -214,12 +214,12 @@ Any punctuation character can be escaped by a preceding `\`.
 Within a code span, the `` ` `` character (or repetitions of it) can be escaped by declaring the code span with multiple `` ` ``s:
 
 ```md
-This is a code span with an escaped `` ` `` character:  
-``let isStruct(x: 'a) = not typeof<'a>.IsClass``
+This is a code span with escaped `` ` `` characters:  
+```let [<Test>] ``One and one is two in F#``() = 1 + 1 |> should equal 2```
 ```
 
-This is a code span with an escaped `` ` `` character:  
-``let isStruct(x: 'a) = not typeof<'a>.IsClass``
+This is a code span with escaped `` ` `` characters:  
+```let [<Test>] ``One and one is two in F#``() = 1 + 1 |> should equal 2```
 
 Besides `` ` `` , no other character can be escaped within a code span (each character simply represents itself).
 
