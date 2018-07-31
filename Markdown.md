@@ -168,6 +168,7 @@ Digits plus `.` or `)`.
 
 In order to automatically apply equal widths to the table cells in the the above Markdown code, proceed as follows:
 * Ensure that each heading separator is at least a triple: `---`.
+* Empty cells will be "optimized" away, such as in `|xxx||yyy|` -> `|xxx|yyy|`, which can mess up the table. To avoid this, ensure that each empty cell contains at least a single space.
 * In [VS Code](https://code.visualstudio.com), with the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension installed, ensure that the setting "markdown.extension.tableFormatter.normalizeIndentation" is `true`.
 * Apply the *Format Document* command.
 
