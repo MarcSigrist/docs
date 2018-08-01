@@ -212,15 +212,22 @@ Any punctuation character can be escaped by a preceding `\`.
 
 ## Escapes in Code Spans
 
-Within a code span, the `` ` `` character (or repetitions of it) can be escaped by declaring the code span with multiple `` ` ``s:
+Within a code span, the `` ` `` character (or repetitions of it) can be escaped by declaring the code span with multiple `` ` ``s.
+
+E.g., to escape `` ` ``, use ``` `` ```:
 
 ```md
-This is a code span with escaped `` ` `` characters:  
+``let version = 2015; let s = `An ES${version} template literal`;``
+```
+
+... which produces: ``let version = 2015; let s = `An ES${version} template literal`;``
+
+To escape ``` `` ```, use ```` ``` ```` :
+
+```md
 ```let [<Test>] ``One and one is two in F#``() = 1 + 1 |> should equal 2```
 ```
 
-This is a code span with escaped `` ` `` characters:  
-```let [<Test>] ``One and one is two in F#``() = 1 + 1 |> should equal 2```
+... which produces: ```let [<Test>] ``One and one is two in F#``() = 1 + 1 |> should equal 2```
 
 Besides `` ` `` , no other character can be escaped within a code span (each character simply represents itself).
-
