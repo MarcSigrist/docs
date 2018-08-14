@@ -10,6 +10,7 @@ This documentation targets any Markdown rendering platform who adhers to the off
         - [Indented Code Blocks](#indented-code-blocks)
         - [Fenced Code Blocks](#fenced-code-blocks)
 - [Block Quotes](#block-quotes)
+- [Images](#images)
 - [Lists](#lists)
     - [Bulleted Lists](#bulleted-lists)
     - [Ordered Lists](#ordered-lists)
@@ -115,6 +116,25 @@ export class AppComponent {
 > Block quote
 >> Nested block quote
 >>> Double nested block quote
+
+# Images
+
+```md
+![alternate text](src)  
+```
+
+E.g., 
+
+```md
+![Sigrist Software Logo](images/sigrist-software-logo.jpg)
+```
+
+renders
+
+![Sigrist Software Logo](images/sigrist-software-logo.jpg)
+
+There is no syntax for image dimensions in Markdown. To specify dimensions,
+use the HTML [`<img>`](https://www.w3schools.com/tags/tag_img.asp) tag instead.
 
 # Lists
 
