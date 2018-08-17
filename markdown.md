@@ -1,6 +1,9 @@
 # Markdown <!-- omit in toc -->
 
-This documentation targets any Markdown rendering platform who adhers to the official [CommonMark](https://spec.commonmark.org) specification. It also targets GitHub. [GitHub Flavored Markdown](https://github.github.com/gfm/) is a superset of CommonMark. Parts of this documentation who apply only to GitHub are explicitly titled "... GitHub Flavored".
+This documentation targets any Markdown rendering platform who adhers to the official
+[CommonMark](https://spec.commonmark.org) specification. It also targets GitHub.
+[GitHub Flavored Markdown](https://github.github.com/gfm/) is a superset of CommonMark.
+Parts of this documentation who apply only to GitHub are explicitly titled "... GitHub Flavored".
 
 - [Recommended Tools and Settings](#recommended-tools-and-settings)
 - [Headings](#headings)
@@ -20,16 +23,25 @@ This documentation targets any Markdown rendering platform who adhers to the off
     - [Escapes in Regular Text](#escapes-in-regular-text)
     - [Escapes in Code Spans](#escapes-in-code-spans)
 
+
 # Recommended Tools and Settings
 
-For Markdown editing, I recommend using [Visual Studio Code](https://code.visualstudio.com). It has a superb built-in Markdown editor who fully adhers to the official [CommonMark](https://spec.commonmark.org) specification and provides live previewing. On top of that, I recommend installing the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension and applying the following settings. 
+For Markdown editing, I recommend using [Visual Studio Code](https://code.visualstudio.com).
+It has a superb built-in Markdown editor who fully adhers to the official
+[CommonMark](https://spec.commonmark.org) specification and provides live previewing.
+On top of that, to support the additional features of GitHub Flavored Markdown,
+I recommend installing the following extensions:
+
+* [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+* [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
+
+Apply the following settings in VS Code: 
 
 | VS Code Setting | Value | Meaning |
 | - | - | - |
 | "markdown.preview.linkify" | `false` | E.g., don't interpret ASP.NET as a link. |
 | "markdown.extension.toc.githubCompatibility" | `true`  | Ensure table of contents is understood by GitHub. |
 | "markdown.extension.tableFormatter.normalizeIndentation" | `true`  | When formatting the Markdown code, equalize the widths of table cells by filling in spaces where necessary (if the heading separators are at least triples `---`). |
-
 
 
 # Headings
