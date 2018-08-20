@@ -61,8 +61,32 @@ See also [npm docs](https://docs.npmjs.com).
 # Using Node Version Manager for Windows
 
 1. Uninstall *Node.js* from Windows if existing.
-2. Delete any node..., .node..., npm... subfolders from _%programfiles%_ and _%programfiles(x86)%_.
+
+2. Delete any node..., .node..., npm... subfolders from 
+   _%programfiles%_ and _%programfiles(x86)%_.
+
 3. Delete any paths from *Path* environment variable leading to npm.
-4. Install [Node Version Manager](https://github.com/coreybutler/nvm-windows) for Windows. This creates _%NVM_HOME%_ and _%NVM_SYMLINK%_ entries in the Path environment variable.
-5. From now on, install, list, etc. Node.js versions exclusively via `nvm install...`, and use nvm for Node.js version switching. There is a symbolic link _%programfiles%\nodejs_. Depending on the Node.js version you are using, the symbolic link is resolved to a Node.js version-specific subfolder in %appdata%\Roaming\nvm*.
-6. Before installing any Node.js *packages* with `npm install...,` ensure `nvm on` first and check the currently active Node.js version using `nvm list`. When runing `npm install...,` npm packages will be installed only in the currently active version-specific subfolder.
+
+4. Install [Node Version Manager](https://github.com/coreybutler/nvm-windows) for Windows. 
+   This creates _%NVM_HOME%_ and _%NVM_SYMLINK%_ entries in the Path environment variable.
+
+5. From now on, install, list, etc. Node.js versions exclusively via `nvm install...`,
+   and use nvm for Node.js version switching. There is a symbolic link _%programfiles%\nodejs_,
+   who is resolved to a version-specific subfolder in *%appdata%\Roaming\nvm*, depending
+   on the Node.js version you are currently using (e.g., *v 10.9.0*).
+
+   **Note**: If npm is not available after installing a new Node.js version with `nvm install...`
+   (e.g., `npm --version` returns an error),
+      1. Make sure you have the latest version of *Node Version Manager for Windows* installed.
+         (`nvm --version` should return the
+         [latest release](https://github.com/coreybutler/nvm-windows/releases).)
+      3. If you are running an old version,
+         1. in Windows Explorer, go to `%NVM_HOME%`.
+         2. Manually delete the incomplete Node.js version folder (who is missing npm,
+            e.g., *v10.9.0*).
+         3. Go to step 4 above (install the latest version of *Node Version Manager for Windows*),
+            and continue from there.
+
+6. Before installing any Node.js *packages* with `npm install...,` ensure `nvm on` first and 
+   check the currently active Node.js version using `nvm list`. When runing `npm install...,`
+   npm packages will be installed only in the currently active version-specific subfolder.  
