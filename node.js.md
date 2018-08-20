@@ -2,6 +2,7 @@
 
 - [Using Node.js](#using-nodejs)
 - [Using Node Package Manager](#using-node-package-manager)
+  - [The Package Configuration File *package.json*](#the-package-configuration-file-packagejson)
   - [Adding Packages](#adding-packages)
   - [Removing Packages](#removing-packages)
 - [Using Node Version Manager for Windows](#using-node-version-manager-for-windows)
@@ -13,6 +14,39 @@ See [Node.js docs](https://nodejs.org/en/docs/).
 # Using Node Package Manager
 
 See also [npm docs](https://docs.npmjs.com).
+
+## The Package Configuration File *package.json*
+
+Optional, but highly recommended. Configures a project's dependencies in a central JSON file,
+including custom scripts to be run by npm, etc.
+
+```js
+{
+    // Dependencies
+    "dependencies": {
+        "@angular/common": "6.1.3",
+        "@angular/compiler": "6.1.3",
+        // etc.
+    },
+    // Dependencies needed only at development time
+    "devDependencies": {
+        "lite-server": "2.4.0",
+        "typescript": "3.0.1",
+      // etc.
+    },
+    // Abbreviations for <command> in npm run <command>
+    "scripts": {
+        "start": "concurrently \"npm run tscwatch\" \"npm run lite\" ",
+        "tsc": "tsc",
+        // etc.
+    }
+}
+```
+
+Use [Node.js semantic version syntax](https://github.com/npm/node-semver) to specify
+version ranges (e.g., `~1.2.3`) or prerelease tags (e.g., `1.2.3-alpha.3`), or to use
+functions in the version logic. 
+
 
 ## Adding Packages
 
